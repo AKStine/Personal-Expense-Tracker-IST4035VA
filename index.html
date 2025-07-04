@@ -1,4 +1,3 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,23 +8,47 @@
 </head>
 <body>
   <section id="landing">
+    <!-- USIU Logo -->
+    <a href="https://usiu.ac.ke" target="_blank">
+      <img src="https://www.usiu.ac.ke/assets/img/usiu-logo.png" alt="USIU Logo" class="usiu-logo">
+    </a>
+
     <h1>Welcome to Your Expense Tracker</h1>
+    <p class="subheading">Make smarter money moves</p>
     <button id="startTracker">Start Tracking</button>
+
+    <!-- Motivational Quote -->
+    <blockquote class="finance-quote">
+      “Do not save what is left after spending, but spend what is left after saving.” — Warren Buffett
+    </blockquote>
+
+    <!-- Client Logo Slider -->
+    <div id="clientSlider">
+      <img src="https://via.placeholder.com/80x40?text=Visa" alt="Visa">
+      <img src="https://via.placeholder.com/80x40?text=Safaricom" alt="Safaricom">
+      <img src="https://via.placeholder.com/80x40?text=Equity" alt="Equity">
+      <img src="https://via.placeholder.com/80x40?text=M-Pesa" alt="M-Pesa">
+      <img src="https://via.placeholder.com/80x40?text=PwC" alt="PwC">
+    </div>
   </section>
 
   <main id="tracker" class="hidden">
+    <button id="goBack" onclick="window.location.href='index.html'">⬅ Back to Home</button>
     <h2>Add a New Expense</h2>
-    <form id="expenseForm">
-      <input type="text" id="expenseName" placeholder="Expense Name" required />
-      <input type="number" id="expenseAmount" placeholder="Amount (KES)" required min="1" step="any" />
-      <button type="submit">Add Expense</button>
-    </form>
+    <div class="expense-container">
+      <form id="expenseForm">
+        <input type="text" id="expenseName" placeholder="Expense Name" required />
+        <input type="number" id="expenseAmount" placeholder="Amount (KES)" required min="1" step="any" />
+        <button type="submit">Add Expense</button>
+      </form>
 
-    <section id="expensesSection">
-      <h3>Expenses</h3>
-      <ul id="expenseList"></ul>
-      <div id="totalDisplay">Total: KES 0</div>
-    </section>
+      <section id="expensesSection">
+        <h3>Expenses</h3>
+        <ul id="expenseList"></ul>
+        <div id="totalDisplay">Total: KES 0</div>
+        <div id="expenseFeedback"></div>
+      </section>
+    </div>
 
     <section id="reports">
       <h3>Reports</h3>
@@ -38,7 +61,20 @@
       </div>
       <div id="recommendations"></div>
     </section>
+
+    <!-- Extended Visualizations -->
+    <div class="charts">
+      <canvas id="lineChart"></canvas>
+      <canvas id="pieChart"></canvas>
+    </div>
+    <div id="selectedExpenseCard" class="insight-card"></div>
   </main>
+
+  <footer>
+    <p>© 2025 Personal Expense Tracker. All rights reserved.</p>
+    <p><a href="https://usiu.ac.ke" target="_blank">Built for USIU Africa</a></p>
+    <p>Contact: support@expensetracker.com</p>
+  </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="script.js"></script>
