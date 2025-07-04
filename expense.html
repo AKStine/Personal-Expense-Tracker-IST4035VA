@@ -1,31 +1,32 @@
-<!-- index.html -->
+<!-- expense.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Personal Expense Tracker</title>
+  <title>Expense Dashboard | Personal Expense Tracker</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <section id="landing">
-    <h1>Welcome to Your Expense Tracker</h1>
-    <button id="startTracker">Start Tracking</button>
-  </section>
+  <!-- Go Back Button -->
+  <button id="goBack" onclick="window.location.href='index.html'">⬅ Back to Home</button>
 
-  <main id="tracker" class="hidden">
+  <main id="tracker">
     <h2>Add a New Expense</h2>
-    <form id="expenseForm">
-      <input type="text" id="expenseName" placeholder="Expense Name" required />
-      <input type="number" id="expenseAmount" placeholder="Amount (KES)" required min="1" step="any" />
-      <button type="submit">Add Expense</button>
-    </form>
+    <div class="expense-container">
+      <form id="expenseForm">
+        <input type="text" id="expenseName" placeholder="Expense Name" required />
+        <input type="number" id="expenseAmount" placeholder="Amount (KES)" required min="1" step="any" />
+        <button type="submit">Add Expense</button>
+      </form>
 
-    <section id="expensesSection">
-      <h3>Expenses</h3>
-      <ul id="expenseList"></ul>
-      <div id="totalDisplay">Total: KES 0</div>
-    </section>
+      <section id="expensesSection">
+        <h3>Expenses</h3>
+        <ul id="expenseList"></ul>
+        <div id="totalDisplay">Total: KES 0</div>
+        <div id="expenseFeedback"></div>
+      </section>
+    </div>
 
     <section id="reports">
       <h3>Reports</h3>
@@ -38,7 +39,22 @@
       </div>
       <div id="recommendations"></div>
     </section>
+
+    <!-- Extended Visualizations -->
+    <section class="charts">
+      <h3>Visual Insights</h3>
+      <canvas id="lineChart"></canvas>
+      <canvas id="pieChart"></canvas>
+      <div id="selectedExpenseCard" class="insight-card"></div>
+    </section>
   </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Personal Expense Tracker. All rights reserved.</p>
+    <p><a href="https://usiu.ac.ke" target="_blank">Built for USIU Africa</a></p>
+    <p>Contact: support@expensetracker.com</p>
+  </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="script.js"></script>
