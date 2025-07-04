@@ -1,0 +1,83 @@
+/* styles.css */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f8fafc;
+  color: #374151;
+  margin: 0;
+  padding: 0;
+}
+
+#landing {
+  background-color: #1e3a8a;
+  color: #fff;
+  padding: 60px;
+  text-align: center;
+}
+
+#landing button {
+  background-color: #d97706;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#tracker {
+  padding: 30px;
+}
+
+form {
+  margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"] {
+  padding: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  background-color: #065f46;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#expenseList {
+  list-style-type: none;
+  padding: 0;
+}
+
+#expenseList li {
+  background-color: #fff;
+  border: 1px solid #e2e8f0;
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#expenseList button {
+  background-color: #ef4444;
+  padding: 5px 10px;
+  font-size: 12px;
+}
+
+#totalDisplay {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.hidden {
+  display: none;
+}
